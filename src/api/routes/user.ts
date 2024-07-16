@@ -1,10 +1,7 @@
-import { Router } from "express";
-import { isAuth } from "../middlewares/isAuth";
-import { attachCurrentUser } from "../middlewares/attachCurrentUser";
-import { Request, Response } from "express";
 import { IUser } from "@/interfaces/IUser";
-import { Logger } from "winston";
-import Container from "typedi";
+import { Request, Response, Router } from "express";
+import { attachCurrentUser } from "../middlewares/attachCurrentUser";
+import { isAuth } from "../middlewares/isAuth";
 
 type CustomRequest = Request & {
   currentUser: IUser;

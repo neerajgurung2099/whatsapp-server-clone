@@ -15,6 +15,12 @@ const User = new mongoose.Schema(
     },
     password: String,
     salt: String,
+    status: String,
+    profilePictureUrl: String,
+    lastSeen: {
+      type: Date,
+      default: Date.now,
+    },
   },
   { timestamps: true }
 );
