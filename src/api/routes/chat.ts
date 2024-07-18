@@ -26,11 +26,7 @@ export default (app: Router) => {
         const chatList = await chatServiceInstance.GetChatList(
           req.currentUser._id
         );
-        res
-          .json({
-            chatList: chatList,
-          })
-          .status(200);
+        res.json(chatList).status(200);
       } catch (e) {
         logger.error(e);
         next(e);
