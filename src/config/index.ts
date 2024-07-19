@@ -1,14 +1,10 @@
 import dotenv from "dotenv";
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
-if ((process.env.NODE_ENV = "development")) {
-  const envFound = dotenv.config();
-  if (envFound.error) {
-    // crash the whole process
-
-    throw new Error("Could'nt find .env file");
-  }
-}
+// const envFound = dotenv.config();
+// if (envFound.error) {
+//   throw new Error("Could'nt find .env file");
+// }
 export default {
   port: parseInt(process.env.PORT, 10),
 
