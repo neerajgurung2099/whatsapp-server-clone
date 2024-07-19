@@ -16,11 +16,7 @@ export default (app: Router) => {
     isAuth,
     attachCurrentUser,
     (req: CustomRequest, res: Response) => {
-      return res
-        .json({
-          user: req.currentUser,
-        })
-        .status(200);
+      return res.json(req.currentUser).status(200);
     }
   );
 };
