@@ -11,7 +11,10 @@ export default ({ app }: { app: express.Application }) => {
     res.status(200).end();
   });
 
-  const allowedDomains = ["https://whatsapp.neerajgurung.com.np"];
+  const allowedDomains = [
+    "https://whatsapp.neerajgurung.com.np",
+    "http://localhost:3000",
+  ];
   const corsOptions = {
     origin: function (origin, callback) {
       if (allowedDomains.indexOf(origin) !== -1 || !origin) {
